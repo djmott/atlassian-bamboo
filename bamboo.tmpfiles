@@ -1,0 +1,2 @@
+# See tmpfiles.d(5) for details
+d /var/lib/bamboo 0700 bamboo bamboo -

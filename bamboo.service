@@ -1,0 +1,15 @@
+[Unit]
+Description=Bamboo Server by Atlassian
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/opt/atlassian-bamboo/bin/start-bamboo.sh
+ExecStop=/opt/atlassian-bamboo/bin/stop-bamboo.sh
+#PIDFile=/opt/atlassian-bamboo/work/catalina.pid
+KillSignal=SIGINT
+LimitNOFILE=8196
+
+[Install]
+WantedBy=multi-user.target
+
